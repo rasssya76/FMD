@@ -7,7 +7,7 @@ handler.before = async function (m) {
     }
     if (user.premiumTime != 0 && user.premium) {
         if (new Date() * 1 >= user.premiumTime) {
-            await this.sendButton(m.chat, `hai @${m.sender.split`@`[0]}\nwaktu premium kamu sudah habis!`, wm, 'Pemilik Bot', '.owner', m)
+            await this.sendButton(m.chat, `hey @${m.sender.split`@`[0]}\your premium time is up!`, wm, 'Bot Owner', '.owner', m)
             user.premiumTime = 0
             user.premium = false
         }
