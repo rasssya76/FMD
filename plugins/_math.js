@@ -5,20 +5,20 @@ handler.before = async function (m) {
   // if (!m.quoted || m.quoted.sender != this.user.jid || !/^Berapa hasil dari/i.test(m.quoted.text)) return !0
   this.math = this.math ? this.math : {}
   try {
-    if (!(id in this.math) && /^apa hasil dari/i.test(m.quoted.text)) return m.reply('soal itu sudah berakhir')
+    if (!(id in this.math) && /^what is the result of/i.test(m.quoted.text)) return m.reply('the matter is over')
     // if (m.quoted.id == this.math[id][0].id) {
     let math = JSON.parse(JSON.stringify(this.math[id][1]))
     if (m.text == math.result) {
       db.data.users[m.sender].exp += math.bonus
       clearTimeout(this.math[id][3])
       delete this.math[id]
-      await this.sendButton(m.chat, benar + ` +${math.bonus} XP`, wm, `lagi`, `.math ${math.mode}`, m)
+      await this.sendButton(m.chat, benar + ` +${math.bonus} XP`, wm, `again`, `.math ${math.mode}`, m)
     } else {
       if (--this.math[id][2] == 0) {
         clearTimeout(this.math[id][3])
         delete this.math[id]
-        m.reply(`*kesempatan habis!*\njawabannya *${math.result}*`)
-      } else m.reply(`*jawaban salah!*\nmasih ada ${this.math[id][2]} kesempatan`)
+        m.reply(`*time⏲ is up!*\n answer: *${math.result}*`)
+      } else m.reply(`**wrong answer!*\ ${this.math[id][2]}`)
     }
     // }
     return !0
