@@ -21,8 +21,8 @@ handler.all = async function (m) {
         
 		// Ini untuk command crator/owner
 		global.kontak2 = [
-         [owner[0], await this.getName(owner[0] + '@s.whatsapp.net'), 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'mr.familia13@gmail.com', true],
-         [owner[1], await this.getName(owner[1] + '@s.whatsapp.net'), 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'FokusDotId13@gmail.com', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
+         [owner[0], await this.getName(owner[0] + '@s.whatsapp.net'), 'ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴩᴇʀ', 'support@thehits.org', true],
+         [owner[1], await this.getName(owner[1] + '@s.whatsapp.net'), 'ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴩᴇʀ', 'support@thehits.org', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
         ]
         
 		// ucapan ini mah
@@ -56,19 +56,19 @@ handler.all = async function (m) {
 module.exports = handler
 
 function ucapan() {
-    const time = moment.tz('Asia/Jakarta').format('HH')
-    let res = "Selamat malam 🌙"
-    if (time >= 4) {
-        res = "Selamat pagi 🌄"
+    const time = moment.tz('Africa/Lagos').format('HH')
+    let res = "Good morning 🌙"
+    if (time >= 0) {
+        res = "Good morning 🌄"
     }
     if (time > 10) {
-        res = "Selamat siang ☀️"
+        res = "Good morning ☀️"
     }
-    if (time >= 15) {
-        res = "Selamat sore 🌅"
+    if (time >= 12) {
+        res = "Good afternoon 🌅"
     }
-    if (time >= 18) {
-        res = "Selamat malam 🌙"
+    if (time >= 19) {
+        res = "Good evening 🌙"
     }
     return res
 }
