@@ -10,7 +10,7 @@ handler.before = async (m) => {
         if (!res.ok) throw 'Sorry, I\'m currently busy.'
         let json = await res.json()
         if (json.success == 'What the heck are you talking about?') await m.reply("What the heck are you talking about?")
-        await m.reply(`${json.success}`)
+        await m.reply(`${json.success.replace("simisimi", "Princess").replace("Jang-a-Lang, Jang-a-Lang", "Princess").replace("simi", "Princess")}`)
    // m.reply(`${json.success}`)
         return !0
     }
