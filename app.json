@@ -1,9 +1,9 @@
 {
-  "name": "family",
-  "description": "WhatsApp Bot Using Library Baileys Multi Device",
-  "repository": "https://github.com/fokusdotid/family-md",
+  "name": "~anon",
+  "description": "WhatsApp Bot for Triads Entertainment",
+  "repository": "https://github.com/adebai/FMD",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["bot", "whatsapp", "whatsapp-bot", "family", "familymd", "familybot", "family-md", "games-wabot", "epic rpg"],
+  "keywords": ["bot", "whatsapp", "whatsapp-bot"],
   "buildpacks": [
   {"url": "heroku/nodejs"},
   {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git​"},
