@@ -38,22 +38,22 @@ global.APIKeys = { // APIKey Here
   'https://api.adiofficial.xyz': 'apikey lu'
 }
 
-global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
-global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
+global.wait = '_*in progress ...*_'
+global.eror = '_*Error, server unstable..*_'
 global.Intervalmsg = 1800 //detik
 
 //========Url Template Buttons=========//
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
-global.urlnya = "https://www.instagram.com/aguzfamilia"
+global.urlnya = "https://www.instagram.com/triadsent"
 
 //============= callButtons =============//
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 813-2017-0984'
+global.phn = '+234 704 764 4754'
 
 //============= Games ================//
-global.benar = '_*Benar✅*_'
-global.salah = '_*Salah❌*_'
-global.dikit = "dikit lagi, semangat ya :')"
+global.benar = '_*True✅*_'
+global.salah = '_*Wrong❌*_'
+global.dikit = "again, cheer up yes :')"
 
 global.multiplier = 100 // The higher, The harder levelup
 
@@ -62,8 +62,8 @@ global.packname = data.namabot;
 global.author = data.owner;
 
 //=========== Requirements ==========//  
-        global.colong1 = 'Ciss 📸'
-        global.colong2 = 'ʙy ᴀɢᴜᴢ ꜰᴀᴍɪʟɪᴀ'
+        global.colong1 = ' 📸'
+        global.colong2 = 'ʙy Triads'
 global.img = pickRandom(waifu)
 global.fla = pickRandom(flaaa)
 
@@ -83,19 +83,19 @@ global.rpg = {
       mythic: '🗳️',
       legendary: '🗃️',
       pet: '🎁',
-      sampah: '🗑',
+      garbage: '🗑',
       armor: '🥼',
       fishingrod: '🎣',
       pickaxe: '⛏️',
       sword: '⚔️',
-      kayu: '🪵',
-      batu: '🪨',
+      wood: '🪵',
+      stone: '🪨',
       iron: '⛓️',
       string: '🕸️',
-      kuda: '🐎',
-      kucing: '🐈' ,
-      anjing: '🐕',
-      makananpet: '🍖',
+      riding: '🐎',
+      cat: '🐈' ,
+      dog: '🐕',
+      petfood: '🍖',
       gold: '👑',
       emerald: '💚'
     }
