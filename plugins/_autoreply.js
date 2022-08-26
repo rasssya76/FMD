@@ -14,31 +14,31 @@ handler.all = async function (m) {
     let user = global.db.data.users[m.sender]
     
     // salam
-    let reg = /(ass?alam|اَلسَّلاَمُ عَلَيْكُمْ|السلام عليکم)/i
-    let isSalam = reg.exec(m.text)
-    if (isSalam && !m.fromMe) {
-        m.reply(`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\n_wa\'alaikumussalam wr.wb._`)
+    let reg = /(hel?o|hi|hey)/i
+    let isHello = reg.exec(m.text)
+    if (isHello && !m.fromMe) {
+        m.reply("Hi, how're you doing?");
     }
     
     // ketika ada yang invite/kirim link grup di chat pribadi
-    if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        this.sendButton(m.chat, `┌「 *Undang Bot ke Grup* 」
-├ 7 Hari / Rp 5,000
-├ 30 Hari / Rp 15,000
-└────
-`.trim(), wm, 'Pemilik Bot', '.owner', m)
-    }
+//     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Go to this link')) && !m.isBaileys && !m.isGroup) {
+//         this.sendButton(m.chat, `┌「 *Undang Bot ke Grup* 」
+// ├ 7 Hari / Rp 5,000
+// ├ 30 Hari / Rp 15,000
+// └────
+// `.trim(), wm, 'Pemilik Bot', '.owner', m)
+//     }
 
-    if (m.isGroup) {
-    if (m.fromMe) return
-    if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
-    	await this.send2Button(m.chat, m.msg.contextInfo.expiration == 604800 ? '\n\nketik *.ephe* untuk matiin pesan sementaranya, biar tombolnya bisa dipake' : 'uhm.. iya ada apa?', wm, `${isBanned ? 'UNBAN' : 'MENU'}`, `${isBanned ? '.unban' : '.?'}`, `${!m.isGroup ? 'DONASI' : isBanned ? 'UNBAN' : 'BAN'}`, `${!m.isGroup ? '.donasi' : isBanned ? '.unban' : '.ban'}`, m)
-    }
-}
+//     if (m.isGroup) {
+//     if (m.fromMe) return
+//     if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
+//     	await this.send2Button(m.chat, m.msg.contextInfo.expiration == 604800 ? '\n\type *.ephe* to turn off the message temporarily, so that the button can be used' : 'uhm.. yes what\'s up?', wm, `${isBanned ? 'UNBAN' : 'MENU'}`, `${isBanned ? '.unban' : '.?'}`, `${!m.isGroup ? 'DONATION' : isBanned ? 'UNBAN' : 'BAN'}`, `${!m.isGroup ? '.donasi' : isBanned ? '.unban' : '.ban'}`, m)
+//     }
+// }
     
-    if (/^bot$/i.test(m.text)) {
-        await this.sendButton(m.chat, !(m.isGroup || m.isPrems) && group ? 'hanya grup' : isBanned ? 'chat banned' : banned ? 'user banned' : 'aktif', wm, !(m.isGroup || m.isPrems) && group ? 'donasi' : isBanned ? 'unban' : banned ? 'minta owner kalo mau di unban' : 'donasi', !(m.isGroup || m.isPrems) && group ? '.donasi' : isBanned ? '.unban' : banned ? '.owner' : '.donasi', m)
-    }
+//     if (/^bot$/i.test(m.text)) {
+//         await this.sendButton(m.chat, !(m.isGroup || m.isPrems) && group ? 'hanya grup' : isBanned ? 'chat banned' : banned ? 'user banned' : 'aktif', wm, !(m.isGroup || m.isPrems) && group ? 'donasi' : isBanned ? 'unban' : banned ? 'minta owner kalo mau di unban' : 'donasi', !(m.isGroup || m.isPrems) && group ? '.donasi' : isBanned ? '.unban' : banned ? '.owner' : '.donasi', m)
+//     }
 
 
     // backup db
@@ -63,19 +63,19 @@ handler.all = async function (m) {
 
 module.exports = handler
 function ucapan() {
-    const time = moment.tz('Asia/Jakarta').format('HH')
-    res = "Selamat dinihari"
-    if (time >= 4) {
-        res = "Selamat pagi"
+    const time = moment.tz('Africa/Lagos').format('HH')
+    res = "Good morning"
+    if (time >= 0) {
+        res = "Good morning"
     }
-    if (time > 10) {
-        res = "Selamat siang"
+    if (time >= 12) {
+        res = "Good afternoon"
     }
     if (time >= 15) {
-        res = "Selamat sore"
+        res = "Good afternoon"
     }
     if (time >= 18) {
-        res = "Selamat malam"
+        res = "Good evening"
     }
     return res
 }
