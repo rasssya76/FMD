@@ -626,7 +626,7 @@ module.exports = {
                                 groupname: await this.getName(id),
                                 membercount: groupMetadata.participants.length
                             })
-                            await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'Welcm' : 'byeTod', action === 'add' ? '.intro' : 'P')
+                            await this.sendButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'Welcm' : 'byeTod', action === 'add' ? '.intro' : 'P')
                         }
                     }
                 }
