@@ -7,7 +7,8 @@ let handler = async (m, { conn }) => {
     	}
     })	
 }
-handler.customPrefix = /(bile?k|ban?h|cum?|knt?l|y?|mmk|p|b(a|i)?c?(o|i)?(t|d)?|wibu|p(a)?nt(e)?k|pepe?k)/i
+handler.customPrefix = /(bile?k|ban?h|cum?|knt?l|y?|mmk|p|b(a|i)?c?(o|i)?(t|d)?|wibu|p(a)?nt(e)?k|pepe?k|anjin?g|kntl|Ahahah)/i
 handler.command = new RegExp
+handler.exp = 8
 
 module.exports = handler

@@ -5,27 +5,23 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ *%ucapan %name*
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+─> *%ucapan %name*
+
+─> Tersisa *%limit Limit*
+─> Role *%role*
+─> Level *%level (%exp / %maxexp)* [%xp4levelup]
+─> %totalexp XP secara Total
+
+─> Tanggal: *%week %weton, %date*
+─> Tanggal Islam: *%dateIslamic*
+─> Waktu: *%time*
+
+─> Uptime: *%uptime (%muptime)*
+─> Database: %rtotalreg dari %totalreg
 %readmore`.trim(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  header: '*%category* ',
+  body: '-> *%cmd* %islimit %isPremium',
+  footer: '\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -224,9 +220,39 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       buttonText: "Klik Disini",
       sections
     }
-    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
+    //return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
     }
+try {
+ppuser = await conn.profilePictureUrl(m.sender, 'image')
+} catch (err) {
+ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+}
+const pporang = await conn.getBuffer(ppuser)
+ let buttonMessage= {
+'document':{'url':sgc},
+'mimetype':global.ddocx,
+'fileName':`${totalreg} USr`,
+'fileLength':99999999999,
+'pageCount':7,
+'contextInfo':{
+'forwardingScore':999,
+'isForwarded':true,
+'externalAdReply':{
+'mediaUrl':'https://chat.whatsapp.com/KTm4p53s6457qcV5aDOAPI',
+'mediaType':2,
+'previewType':'pdf',
+'title':'ALL COMMAND',
+'body':wm,
+'thumbnail':pporang,
+'sourceUrl':'https://chat.whatsapp.com/KTm4p53s6457qcV5aDOAPI'}},
+'caption':text.trim(),
+'footer':wm,
+'buttons':[
+{'buttonId':'.dashboard','buttonText':{'displayText':'Dashboard'},'type':1}
+],
+'headerType':6}
+    await conn.sendMessage(m.chat,buttonMessage, { quoted:m})    
 
     let groups = {}
     for (let tag in tags) {
