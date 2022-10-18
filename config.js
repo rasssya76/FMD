@@ -43,12 +43,12 @@ global.eror = '_*Error, server unstable..*_'
 global.Intervalmsg = 1800 //detik
 
 //========Url Template Buttons=========//
-global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
-global.urlnya = "https://www.instagram.com/triadsent"
+global.dtu = 'BOT GRUP'
+global.urlnya = "https://chat.whatsapp.com/KTm4p53s6457qcV5aDOAPI"
 
 //============= callButtons =============//
-global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+234 704 764 4754'
+global.dtc = 'CALL?'
+global.phn = '+62 821-4210-8243'
 
 //============= Games ================//
 global.benar = '_*True✅*_'
@@ -58,12 +58,12 @@ global.dikit = "again, cheer up yes :')"
 global.multiplier = 100 // The higher, The harder levelup
 
 // Sticker WM
-global.packname = data.namabot;
-global.author = data.owner;
+global.packname = `\n`
+global.author = `R\n-\nB\nO\nT\n6282139103669`
 
 //=========== Requirements ==========//  
         global.colong1 = ' 📸'
-        global.colong2 = 'ʙy Triads'
+        global.colong2 = 'ʙy rama'
 global.img = pickRandom(waifu)
 global.fla = pickRandom(flaaa)
 

@@ -19,6 +19,8 @@ CFonts.say(`${package.name} Oleh @${package.author.name || package.author}`, {
   align: 'center',
 })
 
+require("http").createServer((_, res) => res.end("Ah ah yameteh!")).listen(8080)
+
 var isRunning = false
 /**
  * Start a js file
