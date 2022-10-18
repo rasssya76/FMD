@@ -230,8 +230,8 @@ ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-9
 }
 const pporang = await conn.getBuffer(ppuser)
  let buttonMessage= {
-'document':{'url':sgc},
-'mimetype':global.ddocx,
+'document':{'url':'http://bit.ly/Bot-Wa'},
+'mimetype':'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 'fileName':`${totalreg} USr`,
 'fileLength':99999999999,
 'pageCount':7,
